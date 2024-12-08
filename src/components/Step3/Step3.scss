@@ -1,0 +1,99 @@
+.step3-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.add-on-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray);
+  border-radius: 0.8rem;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  flex-wrap: nowrap; /* Prevent flex items from wrapping */
+
+  &:hover {
+    border-color: var(--purple);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.1rem 1.6rem;
+  }
+
+  &.selected {
+    border-color: var(--purple);
+    background-color: var(--very-light-gray);
+  }
+}
+
+/* Hide the default checkbox */
+.add-on-wrapper input[type='checkbox'] {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  margin-right: 2.4rem;
+  border: 2px solid var(--gray);
+  border-radius: 0.4rem;
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  @media (max-width: 768px) {
+    margin-right: 1.6rem;
+  }
+}
+
+/* When checkbox is checked */
+.add-on-wrapper input[type='checkbox']:checked {
+  background-color: var(--purple);
+  border-color: var(--purple);
+  position: relative;
+}
+
+/* Add a checkmark icon when checked */
+.add-on-wrapper input[type='checkbox']:checked::after {
+  content: '✔';
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-on-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.7rem;
+}
+
+.add-on-label {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--dark-blue);
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+}
+
+.add-on-description {
+  font-size: 1.4rem;
+  color: var(--dark-gray);
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.add-on-price {
+  font-size: 1.2rem;
+  color: var(--purple);
+}

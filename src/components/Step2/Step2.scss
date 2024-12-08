@@ -1,0 +1,123 @@
+.step2-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .plan-price {
+    font-size: 1.4rem;
+    color: var(--dark-gray);
+    font-weight: 400;
+  }
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  background-color: var(--very-light-gray);
+  padding: 1.8rem 0;
+  border-radius: 0.8rem;
+
+  &-label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+
+    &.checked {
+      color: var(--dark-blue);
+    }
+  }
+}
+
+.toggle-button {
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: var(--light-gray);
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.toggle-button.checked {
+  background-color: var(--dark-blue);
+}
+
+.toggle-switch {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  position: absolute;
+  // center veritcally
+  top: 50%;
+  left: 0.4rem;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.toggle-button.checked .toggle-switch {
+  transform: translate(1.8rem, -50%);
+}
+
+.plan {
+  border: 1px solid var(--light-gray);
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  flex: 1;
+  background: transparent;
+}
+
+.plan:hover {
+  border-color: var(--purple);
+}
+
+.plan.selected {
+  border-color: var(--purple);
+  background-color: var(--very-light-gray);
+}
+
+.plan-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    gap: 1.4rem;
+  }
+}
+
+.plan-name {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.plan-features {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+}
+
+.plans {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.8rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}

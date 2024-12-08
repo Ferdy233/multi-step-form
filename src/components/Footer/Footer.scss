@@ -1,0 +1,56 @@
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+
+  .go-back-btn {
+    color: var(--dark-gray);
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  .next-step-btn {
+    padding: 1.5rem 2.5rem;
+    border: none;
+    font-size: 1.6rem;
+    border-radius: 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    margin-left: auto;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--bright-color);
+      }
+    }
+  }
+
+  .confirm-btn {
+    background-color: var(--purple);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #928cff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .form-footer {
+    width: 100%;
+    padding: 1.6rem;
+    background-color: var(--white);
+  }
+}

@@ -1,0 +1,78 @@
+@import '~normalize-scss/sass/normalize/import-now';
+
+:root {
+  --primary-color: #0b2447;
+  --secondary-color: #6224ff;
+  --purple: #483eff;
+  --light-gray: #d0d3e0;
+  --text-color: #8f99a1;
+  --background-color: #f4faff;
+  --white: #ffffff;
+  --pastel-blue: #cfe3ff;
+  --dark-blue: #022959;
+  --dark-gray: #9699aa;
+  --bright-color: #164a8a;
+  --light-blue: #eff5ff;
+  --very-light-gray: #f8f9ff;
+  --gray: #d6d9e6;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #0b2447;
+}
+
+button {
+  font-family: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+/* Center the entire application */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Ensure form-container has the necessary width */
+.form-container {
+  display: flex;
+  max-width: 80rem; /* Adjust as needed */
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}

@@ -1,0 +1,97 @@
+.step4-summary {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-light-gray);
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+}
+
+.plan-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.plan-name {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--dark-blue);
+}
+
+.change-plan {
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  text-decoration: underline;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.change-plan:hover {
+  color: var(--purple);
+}
+
+.plan-price {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--dark-blue);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--light-gray);
+  margin: 2.4rem 0;
+}
+
+.add-ons-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.add-on-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.add-on-name {
+  color: var(--dark-gray);
+}
+
+.add-on-price {
+  color: var(--dark-blue);
+  font-size: 1.4rem;
+}
+
+.total-cost {
+  display: flex;
+  justify-content: space-between;
+  color: var(--dark-blue);
+  padding: 0 2.4rem;
+  margin-top: 2.4rem;
+}
+
+.total-price {
+  color: var(--purple);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .total-price {
+    font-size: 1.6rem;
+  }
+}
+
+.total-cost-label {
+  color: var(--dark-gray);
+  font-size: 1.4rem;
+}
